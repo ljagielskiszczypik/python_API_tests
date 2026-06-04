@@ -28,7 +28,7 @@
     "username": "pnowak",
     "email": "piotr.nowak@example.com",
     "address": {
-      "street": "Słoneczna",
+      "street": "Sloneczna",
       "suite": "Suite 45",
       "city": "Krakow",
       "zipcode": "30-456",
@@ -44,5 +44,12 @@
       "catchPhrase": "Scalable cloud solutions for everyone",
       "bs": "leverage distributed infrastructure"
     }
+  },
+{
+  "name": "Marek Zielinski",
+  "email": "marek.zielinski@example.com",
+  "address": {
+    "city": "Poznan"
   }
+}
 ]

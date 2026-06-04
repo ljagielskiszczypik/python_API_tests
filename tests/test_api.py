@@ -26,3 +26,21 @@ def test_create_user(apis, get_payload):
     assert response.json()['email'] == 'anna.kowalska@example.com'
     assert response.json()['username'] == 'ankow'
     assert response.json()['address']['city'] == 'Wroclaw'
+
+def test_update_user(apis, get_payload):
+    user_data = get_payload[1]
+    response = apis.put(endpoint="users/1", data=user_data)
+    assert response.status_code == 200
+    assert response.json()['name'] == 'Piotr Nowak'
+    assert response.json()['email'] == 'piotr.nowak@example.com'
+    assert response.json()['username'] == 'pnowak'
+    assert response.json()['address']['city'] == 'Krakow'
+    assert response.json()['company']['catchPhrase'] == 'Scalable cloud solutions for everyone'
+
+def test_patch_user(apis, get_payload):
+    user_data = get_payload[2]
+    response = apis.patch(endpoint="users/1", data=user_data)
+    assert response.status_code == 200
+    assert response.json()['name'] == 'Marek Zielinski'
+    assert response.json()['email'] == 'marek.zielinski@example.com'
+    assert response.json()['address']['city'] == 'Poznan'
