@@ -1,3 +1,4 @@
-pytest
+pytest==8.3.5
 requests
 pytest-html
+jsonschema

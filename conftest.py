@@ -1,8 +1,10 @@
-import pytest
 from datetime import datetime
 import os
 import json
 from pathlib import Path
+
+import pytest
+
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
