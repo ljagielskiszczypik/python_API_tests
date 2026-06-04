@@ -27,3 +27,8 @@ class Api:
         url = f"{self.BASE_URL}/{endpoint}"
         response = requests.patch(url=url, headers=self.header, json=data)
         return response
+
+    def delete(self, endpoint):
+        url = f"{self.BASE_URL}/{endpoint}"
+        response = requests.get(url=url, headers=self.header)
+        return response

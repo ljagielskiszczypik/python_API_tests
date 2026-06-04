@@ -44,3 +44,7 @@ def test_patch_user(apis, get_payload):
     assert response.json()['name'] == 'Marek Zielinski'
     assert response.json()['email'] == 'marek.zielinski@example.com'
     assert response.json()['address']['city'] == 'Poznan'
+
+def test_delete_user(apis):
+    response = apis.get("users/1")
+    assert response.status_code == 200
