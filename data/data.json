@@ -1,12 +1,48 @@
 [
   {
-    "name": "Mateusz Majdzinski",
-    "username": "Majda",
-    "email": "majda@gmail.com"
+    "id": 11,
+    "name": "Anna Kowalska",
+    "username": "ankow",
+    "email": "anna.kowalska@example.com",
+    "address": {
+      "street": "Kwiatowa",
+      "suite": "Apt. 12",
+      "city": "Wroclaw",
+      "zipcode": "50-123",
+      "geo": {
+        "lat": "51.1079",
+        "lng": "17.0385"
+      }
+    },
+    "phone": "+48 501 234 567",
+    "website": "annakowalska.pl",
+    "company": {
+      "name": "TechSolutions",
+      "catchPhrase": "Innovative software for modern business",
+      "bs": "optimize digital workflows"
+    }
   },
   {
-    "name": "Robert Polski",
-    "username": "Polak",
-    "email": "polo@gmail.com"
+    "id": 12,
+    "name": "Piotr Nowak",
+    "username": "pnowak",
+    "email": "piotr.nowak@example.com",
+    "address": {
+      "street": "Słoneczna",
+      "suite": "Suite 45",
+      "city": "Krakow",
+      "zipcode": "30-456",
+      "geo": {
+        "lat": "50.0647",
+        "lng": "19.9450"
+      }
+    },
+    "phone": "+48 602 345 678",
+    "website": "piotrnowak.dev",
+    "company": {
+      "name": "CloudMasters",
+      "catchPhrase": "Scalable cloud solutions for everyone",
+      "bs": "leverage distributed infrastructure"
+    }
   }
 ]
