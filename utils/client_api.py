@@ -36,5 +36,5 @@ class Api:
 
     def delete(self, endpoint):
         url = f"{self.BASE_URL}/{endpoint}"
-        response = requests.get(url=url, headers=self.header)
+        response = requests.delete(url=url, headers=self.header)
         return response

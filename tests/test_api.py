@@ -18,7 +18,7 @@ def test_get_users(apis):
 
 
 def test_get_specific_user(apis):
-    response = apis.get(endpoint=f"users/1")
+    response = apis.get(endpoint="users/1")
     validate(schema=USER_SCHEMA, instance=response.json())
     assert response.status_code == 200
     assert response.json()['name'] == 'Leanne Graham'
@@ -60,6 +60,14 @@ def test_patch_user(apis, get_payload):
     assert response.json()['address']['city'] == 'Poznan'
 
 
-def test_delete_user(apis):
-    response = apis.get("users/1")
+@pytest.mark.parametrize(
+    "user",
+    [
+        ("users/1"),
+        ("users/2"),
+        ("users/3")
+    ]
+)
+def test_delete_user(apis,user):
+    response = apis.delete(user)
     assert response.status_code == 200
